@@ -20,8 +20,32 @@
         <button class="toggle-btn" id="toggleBtn" title="Toggle extension">ON</button>
       </div>
     </div>
+
+    <div class="popup-divider"></div>
+
+    <!-- Manual Converter -->
+    <div class="converter-section">
+      <label class="section-title">MANUAL CONVERT</label>
+      <div class="converter-input-row">
+        <input type="text" id="convertInput" placeholder="e.g. 72 km/h" spellcheck="false">
+        <button class="convert-btn" id="convertBtn">GO</button>
+      </div>
+      <div id="convertResult" class="convert-result hidden"></div>
+    </div>
+
+    <div class="popup-divider"></div>
+
+    <!-- History -->
+    <div class="history-section">
+      <label class="section-title">HISTORY</label>
+      <div id="historyList" class="history-list">
+        <span class="history-empty">No conversions yet.</span>
+      </div>
+      <button class="clear-btn hidden" id="clearHistoryBtn">CLEAR</button>
+    </div>
+
     <div class="popup-footer">
-      <span>v1.0 — Physics Grade 11/12</span>
+      <span>v1.1 — Physics Grade 11/12</span>
     </div>
   </div>
   <script src="popup.js"></script>
