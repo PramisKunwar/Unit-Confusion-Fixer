@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Unit Confusion Fixer",
+  "version": "1.0.0",
+  "description": "Detect physical quantities on webpages and show SI conversions in tooltips.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
