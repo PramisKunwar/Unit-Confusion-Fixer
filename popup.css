@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 280px;
+  font-family: 'Courier New', Courier, monospace;
+  background: #f4ecd8;
+  color: #2f2a24;
+}
+
+.popup-container {
+  padding: 12px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-icon {
+  font-size: 22px;
+}
+
+.popup-header h1 {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.popup-divider {
+  height: 1px;
+  background: #2f2a24;
+  margin: 8px 0;
+}
+
+.popup-desc {
+  font-size: 11px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #2f2a24;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background: #ede5d0;
+}
+
+.toggle-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.toggle-btn {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 14px;
+  border: 2px solid #2f2a24;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #7a9e7e;
+  color: #2f2a24;
+  box-shadow: 1px 1px 0px #2f2a24;
+  transition: none;
+}
+
+.toggle-btn:active {
+  box-shadow: none;
+  transform: translate(1px, 1px);
+}
+
+.toggle-btn.off {
+  background: #c97b3b;
+}
+
+.popup-footer {
+  margin-top: 10px;
+  font-size: 10px;
+  opacity: 0.5;
+  text-align: center;
+}
