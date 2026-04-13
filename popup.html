@@ -44,8 +44,107 @@
       <button class="clear-btn hidden" id="clearHistoryBtn">CLEAR</button>
     </div>
 
+    <div class="popup-divider"></div>
+
+    <!-- Tabs: Unit Guide / Constants -->
+    <div class="tabs-bar">
+      <button class="tab-btn active" data-tab="unitGuide">UNIT GUIDE</button>
+      <button class="tab-btn" data-tab="constants">CONSTANTS</button>
+    </div>
+
+    <!-- Unit Guide Tab -->
+    <div class="tab-content" id="tab-unitGuide">
+      <div class="guide-group">
+        <span class="guide-group-title">Length</span>
+        <div class="guide-row">km → m <span class="guide-factor">×1000</span></div>
+        <div class="guide-row">cm → m <span class="guide-factor">÷100</span></div>
+        <div class="guide-row">mm → m <span class="guide-factor">÷1000</span></div>
+        <div class="guide-row">m <span class="guide-factor">SI base</span></div>
+      </div>
+      <div class="guide-group">
+        <span class="guide-group-title">Speed</span>
+        <div class="guide-row">km/h → m/s <span class="guide-factor">÷3.6</span></div>
+        <div class="guide-row">m/s <span class="guide-factor">SI base</span></div>
+      </div>
+      <div class="guide-group">
+        <span class="guide-group-title">Mass</span>
+        <div class="guide-row">g → kg <span class="guide-factor">÷1000</span></div>
+        <div class="guide-row">kg <span class="guide-factor">SI base</span></div>
+      </div>
+      <div class="guide-group">
+        <span class="guide-group-title">Force / Energy / Power</span>
+        <div class="guide-row">N = kg·m/s² <span class="guide-factor">SI</span></div>
+        <div class="guide-row">kJ → J <span class="guide-factor">×1000</span></div>
+        <div class="guide-row">J = kg·m²/s² <span class="guide-factor">SI</span></div>
+        <div class="guide-row">kW → W <span class="guide-factor">×1000</span></div>
+        <div class="guide-row">W = J/s <span class="guide-factor">SI</span></div>
+        <div class="guide-row">Pa = N/m² <span class="guide-factor">SI</span></div>
+      </div>
+      <div class="guide-group">
+        <span class="guide-group-title">Electricity</span>
+        <div class="guide-row">V <span class="guide-factor">volt</span></div>
+        <div class="guide-row">A <span class="guide-factor">ampere</span></div>
+        <div class="guide-row">Ω = V/A <span class="guide-factor">ohm</span></div>
+      </div>
+      <div class="guide-group">
+        <span class="guide-group-title">Waves</span>
+        <div class="guide-row">kHz → Hz <span class="guide-factor">×1000</span></div>
+        <div class="guide-row">MHz → Hz <span class="guide-factor">×10⁶</span></div>
+        <div class="guide-row">Hz <span class="guide-factor">SI base</span></div>
+      </div>
+    </div>
+
+    <!-- Constants Tab -->
+    <div class="tab-content hidden" id="tab-constants">
+      <p class="const-hint">Click any row to copy value + unit</p>
+
+      <div class="guide-group">
+        <span class="guide-group-title">🌍 Universal Constants</span>
+        <div class="const-row" data-copy="c = 2.998 × 10⁸ m/s"><span class="const-name">Speed of light</span><span class="const-sym">c</span><span class="const-val">2.998 × 10⁸ m/s</span></div>
+        <div class="const-row" data-copy="G = 6.674 × 10⁻¹¹ N·m²/kg²"><span class="const-name">Gravitational const.</span><span class="const-sym">G</span><span class="const-val">6.674 × 10⁻¹¹ N·m²/kg²</span></div>
+        <div class="const-row" data-copy="h = 6.626 × 10⁻³⁴ J·s"><span class="const-name">Planck constant</span><span class="const-sym">h</span><span class="const-val">6.626 × 10⁻³⁴ J·s</span></div>
+        <div class="const-row" data-copy="ħ = 1.055 × 10⁻³⁴ J·s"><span class="const-name">Reduced Planck</span><span class="const-sym">ħ</span><span class="const-val">1.055 × 10⁻³⁴ J·s</span></div>
+        <div class="const-row" data-copy="k_B = 1.381 × 10⁻²³ J/K"><span class="const-name">Boltzmann const.</span><span class="const-sym">k<sub>B</sub></span><span class="const-val">1.381 × 10⁻²³ J/K</span></div>
+        <div class="const-row" data-copy="N_A = 6.022 × 10²³ mol⁻¹"><span class="const-name">Avogadro const.</span><span class="const-sym">N<sub>A</sub></span><span class="const-val">6.022 × 10²³ mol⁻¹</span></div>
+        <div class="const-row" data-copy="R = 8.314 J/(mol·K)"><span class="const-name">Gas constant</span><span class="const-sym">R</span><span class="const-val">8.314 J/(mol·K)</span></div>
+        <div class="const-row" data-copy="α ≈ 1/137.036"><span class="const-name">Fine-structure const.</span><span class="const-sym">α</span><span class="const-val">≈ 1/137.036</span></div>
+      </div>
+
+      <div class="guide-group">
+        <span class="guide-group-title">Electromagnetic</span>
+        <div class="const-row" data-copy="e = 1.602 × 10⁻¹⁹ C"><span class="const-name">Elementary charge</span><span class="const-sym">e</span><span class="const-val">1.602 × 10⁻¹⁹ C</span></div>
+        <div class="const-row" data-copy="ε₀ = 8.854 × 10⁻¹² F/m"><span class="const-name">Vacuum permittivity</span><span class="const-sym">ε₀</span><span class="const-val">8.854 × 10⁻¹² F/m</span></div>
+        <div class="const-row" data-copy="μ₀ = 1.257 × 10⁻⁶ H/m"><span class="const-name">Vacuum permeability</span><span class="const-sym">μ₀</span><span class="const-val">1.257 × 10⁻⁶ H/m</span></div>
+        <div class="const-row" data-copy="Z₀ = 376.73 Ω"><span class="const-name">Impedance of vacuum</span><span class="const-sym">Z₀</span><span class="const-val">376.73 Ω</span></div>
+      </div>
+
+      <div class="guide-group">
+        <span class="guide-group-title">Thermodynamic & Radiative</span>
+        <div class="const-row" data-copy="σ = 5.670 × 10⁻⁸ W/(m²·K⁴)"><span class="const-name">Stefan–Boltzmann</span><span class="const-sym">σ</span><span class="const-val">5.670 × 10⁻⁸ W/(m²·K⁴)</span></div>
+        <div class="const-row" data-copy="b = 2.898 × 10⁻³ m·K"><span class="const-name">Wien displacement</span><span class="const-sym">b</span><span class="const-val">2.898 × 10⁻³ m·K</span></div>
+      </div>
+
+      <div class="guide-group">
+        <span class="guide-group-title">Quantum & Atomic</span>
+        <div class="const-row" data-copy="R∞ = 1.097 × 10⁷ m⁻¹"><span class="const-name">Rydberg constant</span><span class="const-sym">R<sub>∞</sub></span><span class="const-val">1.097 × 10⁷ m⁻¹</span></div>
+        <div class="const-row" data-copy="m_e = 9.109 × 10⁻³¹ kg"><span class="const-name">Electron mass</span><span class="const-sym">m<sub>e</sub></span><span class="const-val">9.109 × 10⁻³¹ kg</span></div>
+        <div class="const-row" data-copy="m_p = 1.673 × 10⁻²⁷ kg"><span class="const-name">Proton mass</span><span class="const-sym">m<sub>p</sub></span><span class="const-val">1.673 × 10⁻²⁷ kg</span></div>
+        <div class="const-row" data-copy="m_n = 1.675 × 10⁻²⁷ kg"><span class="const-name">Neutron mass</span><span class="const-sym">m<sub>n</sub></span><span class="const-val">1.675 × 10⁻²⁷ kg</span></div>
+        <div class="const-row" data-copy="u = 1.661 × 10⁻²⁷ kg"><span class="const-name">Atomic mass unit</span><span class="const-sym">u</span><span class="const-val">1.661 × 10⁻²⁷ kg</span></div>
+      </div>
+
+      <div class="guide-group">
+        <span class="guide-group-title">Planck Units</span>
+        <div class="const-row" data-copy="ℓ_P = 1.616 × 10⁻³⁵ m"><span class="const-name">Planck length</span><span class="const-sym">ℓ<sub>P</sub></span><span class="const-val">1.616 × 10⁻³⁵ m</span></div>
+        <div class="const-row" data-copy="t_P = 5.391 × 10⁻⁴⁴ s"><span class="const-name">Planck time</span><span class="const-sym">t<sub>P</sub></span><span class="const-val">5.391 × 10⁻⁴⁴ s</span></div>
+        <div class="const-row" data-copy="m_P = 2.176 × 10⁻⁸ kg"><span class="const-name">Planck mass</span><span class="const-sym">m<sub>P</sub></span><span class="const-val">2.176 × 10⁻⁸ kg</span></div>
+        <div class="const-row" data-copy="E_P = 1.956 × 10⁹ J"><span class="const-name">Planck energy</span><span class="const-sym">E<sub>P</sub></span><span class="const-val">1.956 × 10⁹ J</span></div>
+        <div class="const-row" data-copy="T_P = 1.417 × 10³² K"><span class="const-name">Planck temperature</span><span class="const-sym">T<sub>P</sub></span><span class="const-val">1.417 × 10³² K</span></div>
+      </div>
+    </div>
+
     <div class="popup-footer">
-      <span>v1.1 — Physics Grade 11/12</span>
+      <span>v1.2 — Physics Grade 11/12</span>
     </div>
   </div>
   <script src="popup.js"></script>
