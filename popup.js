@@ -143,3 +143,27 @@ clearHistoryBtn.addEventListener('click', () => {
 });
 
 loadHistory();
+
+// ── Tabs ──
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
+  });
+});
+
+// ── Copy constants ──
+document.querySelectorAll('.const-row').forEach(row => {
+  row.addEventListener('click', () => {
+    const text = row.dataset.copy;
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = document.createElement('div');
+      toast.className = 'copied-toast';
+      toast.textContent = 'Copied: ' + text;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 1500);
+    });
+  });
+});
