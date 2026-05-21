@@ -17,3 +17,6 @@ A Chrome extension that detects physical quantities on any webpage and shows SI 
 
 ## Installation 
 Install: Unzip → chrome://extensions → Developer mode → Load unpacked
+
+## Author
+Pramis Kunwar
